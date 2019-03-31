@@ -151,19 +151,14 @@ table {
   border-spacing: 0px;
   border-collapse: collapse;
   text-align: left;
-  width: 40%;
   max-width: 60vw;
   min-width: 30vw;
 }
-table.ressurser  {
-  width: auto;
-}
-table.ressurser td {
-  padding-right: 1rem;
-}
+
 table td,
 table th {
   padding: 0;
+  padding-right:1rem;
   line-height: 33px;
 }
 thead {
