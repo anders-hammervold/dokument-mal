@@ -63,7 +63,7 @@
               <v-field title="Kunde">Kunde</v-field>
             </div>
             <div>
-              <h3>Odd Morten Sveås</h3>
+              <h3><v-field title="Variants ansvarlige -  navn">Odd Morten Sveås</v-field></h3>
               <div>Variant</div>
             </div>
           </div>
@@ -90,10 +90,12 @@
             <address>
               <h3>Hos Leverandøren:</h3>
               <ul class="noList">
-                <li>Odd Morten Sveås</li>
-                <li>Daglig leder</li>
-                <li>928 07 375</li>
-                <li>oms@variant.no</li>
+                <li><v-field title="Variants ansvarlige -  navn">Odd Morten Sveås</v-field></li>
+                <li><v-field title="Variants ansvarlige -  stilling">Daglig leder</v-field></li>
+                <li><v-field title="Variants ansvarlige -  telefon">928 07 375‬</v-field></li>
+                <li>
+                  <v-field title="Variants ansvarlige -  epost" type="email"
+                    >oms@variant.no</v-field>
               </ul>
             </address>
           </div>
@@ -129,8 +131,9 @@
             </v-field>
             og varer til
             <v-field title="Avslutningsdato" type="date" format="formatDate">
-              2019-01-30 </v-field
-            >.
+              2019-01-30 </v-field>. 
+              Avtalen kan på kundes forespørsel forlenges. Slik forlengelse 
+            krever begge parters skriftlige samtykke.
           </p>
 
           <h4>Partenes representanter</h4>
@@ -158,10 +161,12 @@
             <address>
               <strong>Hos Leverandøren:</strong>
               <ul class="noList">
-                <li>Odd Morten Sveås</li>
-                <li>Daglig leder</li>
-                <li>928 07 375</li>
-                <li>oms@variant.no</li>
+                <li><v-field title="Variants representant -  navn">Odd Morten Sveås</v-field></li>
+                <li><v-field title="Variants representant -  stilling">Daglig leder</v-field></li>
+                <li><v-field title="Variants representant -  telefon">928 07 375‬</v-field></li>
+                <li>
+                  <v-field title="Variants representant -  epost" type="email"
+                    >oms@variant.no</v-field>
               </ul>
             </address>
           </div>
@@ -172,17 +177,21 @@
             bistanden er gitt av tabellen under.
           </p>
 
-          <table>
+          <table class="ressurser">
             <thead>
               <tr>
                 <th>Ressurs</th>
                 <th>Kategori</th>
+                <th>Stilling</th>
               </tr>
             </thead>
             <tbody data-vloop data-title="Nøkkelpersonell">
               <tr>
                 <td>
                   <v-item title="Navn">Konsulent</v-item>
+                </td>
+                <td>
+                  <v-item title="Kategori">Kategori</v-item>
                 </td>
                 <td>
                   <v-item title="Stilling">Stilling</v-item>
@@ -344,25 +353,54 @@
           <table>
             <thead>
               <tr>
-                <th>Ressurs</th>
+                <th>Kategori</th>
                 <th>Timepris</th>
+                <th><v-field title="Timeprisrabattkriterie">( >6 mnd )</v-field></th>
               </tr>
             </thead>
             <tbody>
+                <tr>
+                    <td>
+                      <v-field title="Kategori 1">Juniorkonsulent</v-field>
+                    </td>
+                    <td class="number">
+                      <v-field title="Timepris 1a">900</v-field>
+                    </td>
+                    <td class="number">
+                        <v-field title="Timepris 1b">850</v-field>
+                    </td>
+                  </tr>
               <tr>
-                <td>Senioronsulent</td>
                 <td>
-                  <v-field title="Timepris senioronsulent">1 200</v-field>
+                  <v-field title="Kategori 2">Konsulent</v-field>
+                </td>
+                <td class="number">
+                  <v-field title="Timepris 2a">1050</v-field>
+                </td>
+                <td class="number">
+                    <v-field title="Timepris 2b">1000</v-field>
                 </td>
               </tr>
               <tr>
-                <td>Konsulent</td>
-                <td><v-field title="Timepris konsulent">1 050</v-field></td>
+                <td>
+                  <v-field title="Kategori 3">Seniorkonsulent</v-field>
+                </td>
+                <td class="number">
+                  <v-field title="Timepris 3a">1200</v-field>
+                </td>
+                <td class="number">
+                    <v-field title="Timepris 3b">1150</v-field>
+                </td>
               </tr>
               <tr>
-                <td>Junioronsulent</td>
                 <td>
-                  <v-field title="Timepris junioronsulent">900</v-field>
+                  <v-field title="Kategori 4">Ekspert</v-field>
+                </td>
+                <td class="number">
+                  <v-field title="Timepris 4a">1350</v-field>
+                </td>
+                <td class="number">
+                    <v-field title="Timepris 4b">1290</v-field>
                 </td>
               </tr>
             </tbody>
